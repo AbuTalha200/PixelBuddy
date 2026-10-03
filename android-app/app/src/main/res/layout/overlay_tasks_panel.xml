@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="224dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_panel"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.08"
+        android:text="@string/tasks_title"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/tasks_hint"
+        android:textColor="#ADB4C2"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/analyzeTaskButton"
+        style="@style/PixelBuddy.Button.Primary"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/analyze_screen" />
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PixelBuddy</string>
+    <string name="brand_tag">PIXELBUDDY / 09</string>
+    <string name="screen_title">SCREEN AWARENESS</string>
+    <string name="screen_subtitle">Ask PixelBuddy what to do next.</string>
+    <string name="privacy_note">Frames stay on your device until you tap Analyze screen. Only the requested frame is sent to Gemini.</string>
+    <string name="key_label">GEMINI API KEY</string>
+    <string name="key_hint">Paste your Gemini API key</string>
+    <string name="save_key">Save key on this device</string>
+    <string name="overlay_permission">Enable floating assistant</string>
+    <string name="share_screen">Start screen sharing</string>
+    <string name="analyze_screen">Analyze screen</string>
+    <string name="stop_sharing">Stop sharing</string>
+    <string name="close_overlay">Close overlay</string>
+    <string name="open_settings">Open settings</string>
+    <string name="open_tasks">Open tasks</string>
+    <string name="switch_smiley">Switch smiley</string>
+    <string name="tasks_title">SCREEN TOOLS</string>
+    <string name="tasks_hint">Get advice for what is on screen right now.</string>
+    <string name="status_ready">Ready. Enable the overlay and approve screen sharing.</string>
+    <string name="smiley_label">YOUR SMILEY</string>
+    <string name="smiley_hint">Tap it to see how it reacts. Long-press the floating smiley to poke it.</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="react_female">Make her shy</string>
+    <string name="react_male">Make him facepalm</string>
+    <string name="actions_label">SCREEN TOOLS</string>
+</resources>

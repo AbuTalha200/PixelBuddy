@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_panel"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+    <ImageButton
+        android:id="@+id/menuCloseButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/close_overlay"
+        android:src="@drawable/ic_close"
+        android:tint="#FFFFFF" />
+
+    <ImageButton
+        android:id="@+id/menuSettingsButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/open_settings"
+        android:src="@drawable/ic_settings"
+        android:tint="#FFFFFF" />
+
+    <ImageButton
+        android:id="@+id/menuTasksButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/open_tasks"
+        android:src="@drawable/ic_tasks"
+        android:tint="#FFFFFF" />
+
+    <ImageButton
+        android:id="@+id/menuGenderButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/switch_smiley"
+        android:src="@drawable/ic_swap"
+        android:tint="#FFFFFF" />
+</LinearLayout>

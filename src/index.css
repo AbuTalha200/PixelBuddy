@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: "Space Grotesk", sans-serif;
+  color: #f6f4ef;
+  background: #0c1016;
+  font-synthesis: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: #f14b49;
+  color: #fff;
+}
+
+.mono {
+  font-family: "DM Mono", monospace;
+}
+
+.demo-scene {
+  background-image: url("/images/demo-game.jpg");
+  background-size: cover;
+  background-position: center 61%;
+}
+
+.demo-scene::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #0c1016 2%, #0c1016f0 29%, #0c1016a8 51%, #0c10162b 78%, #0c10161c 100%);
+}
+
+.demo-scene::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #0c1016ba 0%, transparent 22%, transparent 76%, #0c101672 100%);
+}
+
+.pixel-face {
+  image-rendering: pixelated;
+  filter: drop-shadow(0 10px 1px #270b16aa) drop-shadow(0 0 25px #f14b4973);
+}
+
+.pixel-bob {
+  animation: pixel-bob 3.6s ease-in-out infinite;
+}
+
+@keyframes pixel-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.source-scroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.source-scroll::-webkit-scrollbar-thumb {
+  background: #343b48;
+  border: 3px solid #121821;
+  border-radius: 8px;
+}
+
+.source-scroll::-webkit-scrollbar-track {
+  background: #121821;
+}
+
+@media (max-width: 767px) {
+  .demo-scene {
+    background-position: 62% 64%;
+  }
+
+  .demo-scene::before {
+    background: linear-gradient(180deg, #0c1016ed 0%, #0c1016af 39%, #0c101638 82%);
+  }
+}

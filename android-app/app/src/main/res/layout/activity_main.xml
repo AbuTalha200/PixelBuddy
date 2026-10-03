@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C1016"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="22dp"
+        android:paddingBottom="32dp"
+        android:paddingTop="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.16"
+            android:text="@string/brand_tag"
+            android:textColor="#F14B49"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/screen_title"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/screen_subtitle"
+            android:textColor="#BFC4D0"
+            android:textSize="16sp" />
+
+        <!-- Smiley preview + male / female switch -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_panel"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                style="@style/PixelBuddy.SectionLabel"
+                android:text="@string/smiley_label" />
+
+            <com.pixelbuddy.ai.overlay.PixelSmileyView
+                android:id="@+id/previewSmiley"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/smiley_hint"
+                android:textColor="#969EAD"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/maleButton"
+                    style="@style/PixelBuddy.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_toggle"
+                    android:text="@string/gender_male" />
+
+                <Button
+                    android:id="@+id/femaleButton"
+                    style="@style/PixelBuddy.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_toggle"
+                    android:text="@string/gender_female" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/reactButton"
+                style="@style/PixelBuddy.Button"
+                android:layout_marginTop="10dp"
+                android:text="@string/react_female" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_panel"
+            android:padding="16dp"
+            android:text="@string/status_ready"
+            android:textColor="#E6E8ED"
+            android:textSize="14sp" />
+
+        <TextView
+            style="@style/PixelBuddy.SectionLabel"
+            android:layout_marginTop="28dp"
+            android:text="@string/key_label" />
+
+        <EditText
+            android:id="@+id/apiKeyInput"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_input"
+            android:hint="@string/key_hint"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#7B8290"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/saveKeyButton"
+            style="@style/PixelBuddy.Button"
+            android:layout_marginTop="10dp"
+            android:text="@string/save_key" />
+
+        <TextView
+            style="@style/PixelBuddy.SectionLabel"
+            android:layout_marginTop="28dp"
+            android:text="@string/actions_label" />
+
+        <Button
+            android:id="@+id/overlayPermissionButton"
+            style="@style/PixelBuddy.Button"
+            android:layout_marginTop="10dp"
+            android:text="@string/overlay_permission" />
+
+        <Button
+            android:id="@+id/shareScreenButton"
+            style="@style/PixelBuddy.Button"
+            android:layout_marginTop="10dp"
+            android:text="@string/share_screen" />
+
+        <Button
+            android:id="@+id/analyzeButton"
+            style="@style/PixelBuddy.Button.Primary"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/analyze_screen" />
+
+        <Button
+            android:id="@+id/stopSharingButton"
+            style="@style/PixelBuddy.Button"
+            android:layout_marginTop="10dp"
+            android:text="@string/stop_sharing" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:lineSpacingExtra="3dp"
+            android:text="@string/privacy_note"
+            android:textColor="#969EAD"
+            android:textSize="13sp" />
+    </LinearLayout>
+</ScrollView>

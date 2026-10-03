@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="smiley_size">72dp</dimen>
+    <dimen name="menu_width">60dp</dimen>
+    <dimen name="menu_height">216dp</dimen>
+    <dimen name="bubble_width">256dp</dimen>
+    <dimen name="overlay_gap">12dp</dimen>
+</resources>
