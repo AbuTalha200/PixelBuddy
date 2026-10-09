@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>PixelBuddy 3D preview</title>
+<style>html,body{margin:0;height:100%;background:#0b0920;overflow:hidden;font-family:sans-serif}
+#info{position:absolute;top:10px;left:10px;color:#ddd;background:#0009;padding:8px 12px;border-radius:6px;font-size:13px}
+#info b{color:#ffb070}</style></head>
+<body><div id="info"><b>PixelBuddy scene</b><br>Drag: orbit · Right-drag: pan · Scroll: zoom<br><label><input type="checkbox" id="wire"> wireframe</label></div>
+<script type="importmap">{"imports":{"three":"./lib/three.module.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from './lib/GLTFLoader.js';
+import {OrbitControls} from './lib/OrbitControls.js';
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0b0920);
+scene.fog = new THREE.Fog(0x0b0920, 25, 60);
+const camera = new THREE.PerspectiveCamera(40, innerWidth/innerHeight, 0.1, 500);
+camera.position.set(0, 7, 24);
+const renderer = new THREE.WebGLRenderer({antialias:true});
+renderer.setSize(innerWidth, innerHeight);
+renderer.setPixelRatio(devicePixelRatio);
+document.body.appendChild(renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.set(0, 6, -3);
+controls.update();
+scene.add(new THREE.AmbientLight(0xffffff, 1.2));
+const dir = new THREE.DirectionalLight(0xffffff, 0.8); dir.position.set(5,10,10); scene.add(dir);
+new GLTFLoader().load('./pixelbuddy_scene.glb', gltf => {
+  scene.add(gltf.scene);
+  gltf.scene.traverse(o => { if (o.isMesh) o.material.side = THREE.DoubleSide; });
+});
+document.getElementById('wire').onchange = e => scene.traverse(o => { if (o.isMesh) o.material.wireframe = e.target.checked; });
+addEventListener('resize', () => { camera.aspect = innerWidth/innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
+renderer.setAnimationLoop(() => { controls.update(); renderer.render(scene, camera); });
+</script></body></html>
